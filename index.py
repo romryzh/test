@@ -3,7 +3,7 @@
 
 import web
 
-urls = ("/.*", "hello")
+urls = ("/dynamic", "hello")
 app = web.application(urls, globals())
 
 class hello:
