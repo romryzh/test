@@ -7,7 +7,7 @@ Implement deployment of 3 tier application, which would run on Ubuntu server 18.
 4. Install simple Python application which would serve "Hello World!" via FCGI.
 5. Make sure all your changes are persistent after reboot.
 
-## Network configuration on target machine:
+## Network configuration on the target machine:
 
 ```
 rry@test:~$ cat /etc/netplan/50-cloud-init.yaml 
@@ -39,7 +39,7 @@ git clone https://github.com/romryzh/test.git
 ```
 ssh-keygen -f ~/.ssh/ansible
 ```
-3. Replace ansible_user parameter in hosts inventory file with name of the user on target machine.
+3. Replace ansible_user parameter in hosts inventory file with name of the user on the target machine.
 4. Run playbook:
 ```
 rry@ansible:~/test/ansible$ ansible-playbook test_deploy.yaml --ask-sudo-pass -i hosts
@@ -111,5 +111,7 @@ changed: [host1]
 PLAY RECAP *********************************************************************
 host1                      : ok=18   changed=4    unreachable=0    failed=0   
 ```
-5. Open page on a browser:
-![/](https://raw.githubusercontent.com/romryzh/test/master/pictures/img1.png)
+5. Open page in browser:
+![1](https://raw.githubusercontent.com/romryzh/test/master/pictures/img1.png)
+![2](https://raw.githubusercontent.com/romryzh/test/master/pictures/img2.png)
+![3](https://raw.githubusercontent.com/romryzh/test/master/pictures/img3.png)
