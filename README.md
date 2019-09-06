@@ -1,4 +1,4 @@
-_Tasks:_
+*Tasks:*
 Implement deployment of 3 tier application, which would run on Ubuntu server 18.04 LTS, would use Nginx, Postgres and Python code in consitent and repeatable way. You would need to automate deployment of:
 1. Setup use of 10.0.0.2/18 static IP address, Netmask 255.255.0.0, gateway 10.0.0.1/182.    
 2. Install Nginx, configure it to serve static pages and dynamic pages via FCGI (python application)
@@ -6,7 +6,7 @@ Implement deployment of 3 tier application, which would run on Ubuntu server 18.
 4. Install simple Python application which would serve "Hello World!" via FCGI.
 5. Make sure all your changes are persistent after reboot.
 
-_Network configuration on target machine:_
+*Network configuration on target machine:*
 ```
 rry@test:~$ cat /etc/netplan/50-cloud-init.yaml 
 # This file is generated from information provided by
@@ -27,12 +27,12 @@ network:
 rry@test:~$ sudo netplan apply
 ```
 
-_Configuration of the taget machine using Ansible playbook:_
+*Configuration of the taget machine using Ansible playbook:*
 1. Clone git repository:
 ```
 git clone https://github.com/romryzh/test.git
 ```
-2.Generate SSH key-pair:
+2. Generate SSH key-pair:
 ```
 ssh-keygen -f ~/.ssh/ansible
 ```
