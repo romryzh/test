@@ -74,11 +74,6 @@
       copy:
         src: files/default_index.html
         dest: /var/www/html/default_index.html
-      
-    - name: Create /var/www/hello-app dir
-      file:
-        dest: /var/www/hello-app
-        state: directory
 
     - name: Clone git repo
       git:
