@@ -112,6 +112,6 @@ PLAY RECAP *********************************************************************
 host1                      : ok=18   changed=4    unreachable=0    failed=0   
 ```
 5. Open page in browser:
-![1](https://raw.githubusercontent.com/romryzh/test/master/pictures/img1.png)
-![2](https://raw.githubusercontent.com/romryzh/test/master/pictures/img2.png)
-![3](https://raw.githubusercontent.com/romryzh/test/master/pictures/img3.png)
+![1](https://raw.githubusercontent.com/romryzh/test/pictures/pictures/img1.png)
+![2](https://raw.githubusercontent.com/romryzh/test/pictures/pictures/img2.png)
+![3](https://raw.githubusercontent.com/romryzh/test/pictures/pictures/img3.png)
