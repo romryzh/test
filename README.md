@@ -1,5 +1,4 @@
 # Tasks:
-
 Implement deployment of 3 tier application, which would run on Ubuntu server 18.04 LTS, would use Nginx, Postgres and Python code in consitent and repeatable way. You would need to automate deployment of:
 1. Setup use of 10.0.0.2/18 static IP address, Netmask 255.255.0.0, gateway 10.0.0.1/182.    
 2. Install Nginx, configure it to serve static pages and dynamic pages via FCGI (python application)
@@ -8,7 +7,6 @@ Implement deployment of 3 tier application, which would run on Ubuntu server 18.
 5. Make sure all your changes are persistent after reboot.
 
 ## Network configuration on the target machine:
-
 ```
 rry@test:~$ cat /etc/netplan/50-cloud-init.yaml 
 # This file is generated from information provided by
@@ -29,17 +27,23 @@ network:
 rry@test:~$ sudo netplan apply
 ```
 
-## Configuration of the taget machine using Ansible playbook:
+## Configuration of the target machine using Ansible playbook:
+```
+$ ansible --version
+ansible 2.0.0.2
+```
 
 1. Clone git repository:
 ```
 git clone https://github.com/romryzh/test.git
 ```
-2. Generate SSH key-pair:
+2. Generate SSH key-pair and copy public key to the target machine:
 ```
 ssh-keygen -f ~/.ssh/ansible
+ssh -i ~/.ssh/ansible.pub <username>@10.0.0.2
 ```
-3. Replace ansible_user parameter in hosts inventory file with name of the user on the target machine.
+
+3. Replace `ansible_user parameter` in `hosts` inventory file with name of the user on the target machine.
 4. Run playbook:
 ```
 rry@ansible:~/test/ansible$ ansible-playbook test_deploy.yaml --ask-sudo-pass -i hosts
@@ -111,7 +115,8 @@ changed: [host1]
 PLAY RECAP *********************************************************************
 host1                      : ok=18   changed=4    unreachable=0    failed=0   
 ```
-5. Open page in browser:
-![1](https://raw.githubusercontent.com/romryzh/test/master/pictures/img1.png)
-![2](https://raw.githubusercontent.com/romryzh/test/master/pictures/img2.png)
-![3](https://raw.githubusercontent.com/romryzh/test/master/pictures/img3.png)
+5. Open pages in browser:
+
+![1](https://raw.githubusercontent.com/romryzh/test/pictures/pictures/img1.png)
+![2](https://raw.githubusercontent.com/romryzh/test/pictures/pictures/img2.png)
+![3](https://raw.githubusercontent.com/romryzh/test/pictures/pictures/img3.png)
