@@ -111,3 +111,5 @@ changed: [host1]
 PLAY RECAP *********************************************************************
 host1                      : ok=18   changed=4    unreachable=0    failed=0   
 ```
+5. Open page on a browser:
+![/](https://raw.githubusercontent.com/romryzh/test/master/pictures/img1.png)
