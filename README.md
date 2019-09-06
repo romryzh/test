@@ -43,7 +43,7 @@ ssh-keygen -f ~/.ssh/ansible
 ssh -i ~/.ssh/ansible.pub <username>@10.0.0.2
 ```
 
-3. Replace ansible_user parameter in hosts inventory file with name of the user on the target machine.
+3. Replace `ansible_user parameter` in `hosts` inventory file with name of the user on the target machine.
 4. Run playbook:
 ```
 rry@ansible:~/test/ansible$ ansible-playbook test_deploy.yaml --ask-sudo-pass -i hosts
@@ -116,6 +116,7 @@ PLAY RECAP *********************************************************************
 host1                      : ok=18   changed=4    unreachable=0    failed=0   
 ```
 5. Open pages in browser:
+
 ![1](https://raw.githubusercontent.com/romryzh/test/pictures/pictures/img1.png)
 ![2](https://raw.githubusercontent.com/romryzh/test/pictures/pictures/img2.png)
 ![3](https://raw.githubusercontent.com/romryzh/test/pictures/pictures/img3.png)
