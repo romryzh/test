@@ -85,6 +85,7 @@
         repo: 'https://github.com/romryzh/test.git'
         dest: /var/www/test
         version: master
+        force: yes
    
     - name: Add exec permmisions to index.py
       file:
