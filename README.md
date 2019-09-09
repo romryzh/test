@@ -43,7 +43,7 @@ ssh-keygen -f ~/.ssh/ansible
 ssh -i ~/.ssh/ansible.pub <username>@10.0.0.2
 ```
 
-3. Replace `ansible_user parameter` in `hosts` inventory file with name of the user on the target machine.
+3. Replace `ansible_user` parameter in `hosts` inventory file with name of the user on the target machine.
 4. Run playbook:
 ```
 rry@ansible:~/test/ansible$ ansible-playbook test_deploy.yaml --ask-sudo-pass -i hosts
