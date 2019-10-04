@@ -104,6 +104,7 @@ d-i apt-setup/multiverse boolean true
 d-i apt-setup/services-select multiselect security
 d-i apt-setup/security_host string security.ubuntu.com
 d-i apt-setup/security_path string /ubuntu
+d-i debian-installer/allow_unauthenticated boolean true
 
 ################################################################################
 ### Package selection
