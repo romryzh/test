@@ -4,7 +4,7 @@
 
 d-i debian-installer/locale string en_US.UTF-8
 d-i debian-installer/language string en
-d-i debian-installer/country string EN
+d-i debian-installer/country string UA
 d-i localechooser/supported-locales en_US.UTF-8
 d-i localechooser/translation/warn-light boolean true
 d-i localechooser/translation/warn-severe boolean true
