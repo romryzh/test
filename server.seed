@@ -33,13 +33,13 @@ d-i netcfg/get_domain string lan
 ### Mirror settings
 ################################################################################
 
-#d-i mirror/country string manual
-#d-i mirror/http/hostname string mirror.yandex.ru
+d-i mirror/country string Ukraine
+d-i mirror/http/hostname string ua.archive.ubuntu.com
 #d-i mirror/http/directory string /ubuntu
 #d-i mirror/http/proxy string
-#d-i mirror/http/mirror select mirror.yandex.ru
+#d-i mirror/http/mirror select ua.archive.ubuntu.com
 
-################################################################################
+##############################################################################
 ### Clock and time zone setup
 ################################################################################
 
